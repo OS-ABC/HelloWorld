@@ -122,7 +122,7 @@ PR的标题最好以自己修改的模块文件路径开头, 方便维护者辨�
 
 ![](images/pr-01.png)
 
-更多git使用方法详见git章节(TODO)
+
 
 ## PR步骤总结 
     1、将他人的仓库Fork成自己的仓库（访问该仓库页面，点击fork） 
@@ -132,3 +132,6 @@ PR的标题最好以自己修改的模块文件路径开头, 方便维护者辨�
     5、提交修改（git add… & git commit -m “…”） 
     6、创建远程分支（要从GitHub发送Pull Request，GitHub端的仓库中必须有一个包含了修改后代码的分支。git push origin 远程分支名） 
     7、发送Pull Request（登陆GitHub，切换到相应分支，点击Compare可查看分支之间的差别。点击New Pull Request，在随后显示的表单中填写本次进行Pull Request的理由，并提交即可）
+    
+更多git使用方法详见git章节(TODO)
+或者参考https://git-scm.com/book/zh/v2
