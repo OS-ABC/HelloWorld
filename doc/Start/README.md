@@ -58,14 +58,12 @@ cat id_rsa.pub
 
 ![fork](images/fork.png)
 
-2、打开命令行窗口，输入 git clone 复制地址(使用ssh地址, 注意, **得是自己fork后的仓库地址**)
+2、打开命令行窗口，输入 git clone 复制地址(使用ssh地址, 注意, **得是自己fork后的仓库地址, 下图中的地址是笔者自己的仓库地址, 每个人fork后的仓库地址都是不一样的**)
 
-![使用ssh地址1](images/use-ssh-01.png)
-
-![使用ssh地址2](images/use-ssh-02.png)
+![使用ssh地址](images/use-ssh-03.png)
 
 ```bash
-git clone git@github.com:OS-ABC/HelloWorld.git
+git clone git@github.com:js00070/HelloWorld.git
 ```
 
 
