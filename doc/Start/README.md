@@ -101,6 +101,8 @@ cat id_rsa.pub
 
 到github自己的仓库主页, 发现会有一个`Compare&Pull Request`选项, 点击即可提交PR
 
+![](images/pr-01.png)
+
 更多git使用方法详见git章节(TODO)
 
 
