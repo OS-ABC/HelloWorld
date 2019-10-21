@@ -44,10 +44,11 @@ ssh-keygen -t rsa -C “你的邮箱”
 cd ~/.ssh
 cat id_rsa.pub
 # 复制公钥内容
-
+（cat  ~/.ssh/id_rsa.pub复制输出内容到github（windows在用户/用户/.ssh/id_rsa.pub））
 ```
 
 打开github设置秘钥的界面 https://github.com/settings/keys
+
 
 点击"New SSH key", 将公钥内容粘贴进去, 标题自己起一个. 之后就可以使用ssh进行clone/pull/push等操作了, 省去了繁琐的账号密码输入流程.
 
