@@ -124,5 +124,11 @@ PR的标题最好以自己修改的模块文件路径开头, 方便维护者辨�
 
 更多git使用方法详见git章节(TODO)
 
-
-
+## PR步骤总结 
+    1、将他人的仓库Fork成自己的仓库（访问该仓库页面，点击fork） 
+    2、将自己的仓库clone到本地（git clone 自己仓库的URL） 
+    3、创建特性分支（在GitHub上发送Pull Request时，一般都是发送特性分支。这样一来，Pull Request就拥有了更明确的特性[主题]，让对方了解自己修改代码的意图，有助于提高代码的审查效率） 
+    4、做出自己需要的修改(可以用自己喜欢的编辑器修改)
+    5、提交修改（git add… & git commit -m “…”） 
+    6、创建远程分支（要从GitHub发送Pull Request，GitHub端的仓库中必须有一个包含了修改后代码的分支。git push origin 远程分支名） 
+    7、发送Pull Request（登陆GitHub，切换到相应分支，点击Compare可查看分支之间的差别。点击New Pull Request，在随后显示的表单中填写本次进行Pull Request的理由，并提交即可）
