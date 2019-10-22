@@ -1,0 +1,37 @@
+# 20191022 
+* 学习git使用,doc文件上传至课堂派。
+* 简单的了解了html,实现了一个网页
+* 网页源码如下：
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>这是我第一个网站</title>
+</head>
+
+<body style="background:url(src/bg.jpg) no-repeat,center 0 ;">
+	<p style="font-family:Arial, Helvetica, sans-serif;
+		color:white;font-size: 30px;text-align:center;">
+		10:33 </p>
+	<p style="font-family: Arial;color: cornsilk;font-size: 40px; text-align: center;">My Sweet Home</p>
+	<p>这是另一个段落</p>
+	<p style="color: blue;margin-left:20px;">这是一个彩色的段落</p>
+	<!-- <p>我的母亲有<span style="color: blue;">蓝色</span>的眼睛</p> -->
+	<!-- <img src="src/desk.jpg" width="960" height="520" usemap="#baidumap">
+	<map name="baidumap">
+		<area shape="circle" coords="480,260,100" href="https://www.baidu.com/" alt="None">
+	</map> -->
+	<div  width="960" height="520"></div>
+	<table >
+		<tr>
+			<td><img src="src/desk.jpg" width="960" height="520"></td>
+			<td><img src="src/desk.jpg" width="960" height="520"></td>
+		</tr>
+		<tr>
+				<td><img src="src/desk.jpg" width="960" height="520"></td>
+				<td><img src="src/desk.jpg" width="960" height="520"></td>
+		</tr>
+	</table>
+	
+</body>
+</html>
