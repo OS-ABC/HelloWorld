@@ -6,7 +6,7 @@
 
 
 ## OS-ABC/HelloWorld项目包含哪些内容
-+ 如何快速参与及使用本项目
++ [如何快速参与及使用本项目](/doc/Start/README.md)
 + 第一部分 基础知识 
     + Linux基本命令使用
     + git基本使用
@@ -44,3 +44,6 @@
     * 计算机网路
     * 数据结构与算法
     
+
+## 学习记录与总结
++ 【[周报](/doc/HomeWork/Students.md)】
