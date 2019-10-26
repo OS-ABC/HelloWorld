@@ -71,7 +71,6 @@
 *  路学林  【[周报](/doc/HomeWork/1901210467.md)】 
 *  秦迅  【[周报](/doc/HomeWork/1901210481.md)】 
 *  任晶  【[周报](/doc/HomeWork/1901210484.md)】 
-*  任钦  【[周报](/doc/HomeWork/1901210485.md)】 
 *  任兆希  【[周报](/doc/HomeWork/1901210486.md)】 
 *  陶宇清  【[周报](/doc/HomeWork/1901210498.md)】 
 *  滕飞  【[周报](/doc/HomeWork/1901210499.md)】 
