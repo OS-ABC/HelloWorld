@@ -1,6 +1,18 @@
-# git以及提交pr的指引
+# git以及提交PR的指引
 
-[TOC]
+<!-- TOC -->
+- [安装Git](#安装git)
+    - [Windows](#windows)
+    - [MacOS](#macos)
+    - [Linux](#linux)
+- [创建一个github账户](#创建一个github账户)
+- [在本机上设置邮箱和用户名](#在本机上设置邮箱和用户名)
+- [配置SSH key](#配置ssh-key)
+- [检出仓库](#检出仓库)
+- [修改内容](#修改内容)
+- [提交PR](#提交pr)
+- [PR步骤总结](#pr步骤总结)
+<!-- /TOC -->
 
 ## 安装Git
 
@@ -12,9 +24,9 @@
 
 一般在mac中是自带git的, 若无git, 则可通过包管理器homebrew安装git, 具体见MacOS系统使用指引章节(TODO)
 
-### linux
+### Linux
 
-linux各发行版一般是自带git的, 若无git, 则用各发行版特定的包管理器安装, 具体见linux各发行版使用指引章节(TODO)
+Linux各发行版一般是自带git的, 若无git, 则用各发行版特定的包管理器安装, 具体见Linux各发行版使用指引章节(TODO)
 
 ## 创建一个github账户
 
