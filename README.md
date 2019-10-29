@@ -29,9 +29,9 @@
     * Android平台
     * TensorFlow框架
 + 第四部分 机器学习原理与实践
-    * [机器学习原理]（doc/ML/README.md）
-    * [机器学习_Python实践]（doc/ML_Python/README.md）
-    * [机器学习_TensorFlow实践]（doc/ML_TensorFlow/README.md）
+    * [机器学习原理](doc/ML/README.md)
+    * [机器学习_Python实践](doc/ML_Python/README.md)
+    * [机器学习_TensorFlow实践](doc/ML_TensorFlow/README.md)
     * 手写数字识别系统_Python实践
     * 手写数字识别系统_TensorFlow实践
 + 第五部分 子模块开发实践
