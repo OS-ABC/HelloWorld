@@ -28,18 +28,22 @@
     * iOS平台
     * Android平台
     * TensorFlow框架
-+ 第四部分 子模块开发实践
++ 第四部分 机器学习原理与实践
+    * 机器学习原理
+    * 机器学习实践_Python
+    * 机器学习实践_TensorFlow
++ 第五部分 子模块开发实践
     * 爬虫模块
     * 用户注册登录模块
     * Excel导入导出模块
     * PDF导出模块
-+ 第五部分 开源项目学习
++ 第六部分 开源项目学习
     * ServiceComb
     * SkyWalking
     * DolphinScheduler
     * Wechaty
     * DevUI
-+ 第六部分  理论知识
++ 第七部分  理论知识
     * 操作系统
     * 计算机网路
     * [数据结构与算法](/doc/Algorithms/README.md)
