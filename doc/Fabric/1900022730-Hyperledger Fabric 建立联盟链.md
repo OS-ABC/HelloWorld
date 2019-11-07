@@ -265,7 +265,7 @@ source ~/.profile
 peer version
 ```
 
-![1573024841593](/home/sherry/course/实验班/Hyperledger Fabric 建立联盟链.assets/1573024841593.png)
+![1573024841593](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1573024841593.png)
 
 ## 3. 搭建网络
 
