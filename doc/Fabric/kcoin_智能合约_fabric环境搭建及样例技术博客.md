@@ -1,6 +1,8 @@
 ### 1.curl安装
 
-![image-20191105232729034](/Users/jacyn/Library/Application Support/typora-user-images/image-20191105232729034.png)
+![image-20191105232729034](pic/image-20191105232729034.png)
+
+
 
 ```
 # vim /etc/ld.so.conf      //在新的一行中加入库文件所在目录
@@ -18,7 +20,7 @@ apt install docker-compose
 
 ### 3.go安装
 
-![image-20191106000153385](/Users/jacyn/Library/Application Support/typora-user-images/image-20191106000153385.png)
+![image-20191106000153385](pic/image-20191106000153385.png)
 
 ### 4.jsnode安装
 
@@ -102,7 +104,7 @@ python --version
 
 8. 这个过程出现了错误
 
-   ![](/Users/jacyn/Documents/pku/mdfile/image-20191107160433498.png)
+   ![](pic/image-20191107160433498.png)
 
    [修改 /etc/resolv.conf 配置](https://www.cnblogs.com/chenfool/p/8353425.html)，将 options timeout:2 attempts:3 rotate single-request-reopen 内容注释掉，再重启服务。Fabric环境运行成功！
 
@@ -111,11 +113,11 @@ python --version
    ./network_setup.sh up mychannel
    ```
 
-   ![image-20191106012119007](/Users/jacyn/Library/Application Support/typora-user-images/image-20191106012119007.png)
+   ![image-20191106012119007](pic/image-20191106012119007.png)
 
    
 
-   ![image-20191106012134469](/Users/jacyn/Library/Application Support/typora-user-images/image-20191106012134469.png)
+   ![image-20191106012134469](pic/image-20191106012134469.png)
 
    ./network_setup.sh up 指令进行了如下操作：
 
