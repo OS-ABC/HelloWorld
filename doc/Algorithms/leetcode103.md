@@ -45,3 +45,45 @@ class Solution:
 
 自己只实现了python 版本， 欢迎各位修改不足，或者给出其他版本的实现。
 
+添加 C++ 版本的代码如下：
+``` c++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        queue<TreeNode*> q;
+        vector<vector<int>> res;
+        if (root == NULL) return res;
+        q.push(root);
+        int flag = 1;
+        while (!q.empty()){
+            int len = q.size();
+            vector<int> temp;
+            for (int i = 0; i < len; i ++){
+                TreeNode *t = q.front();
+                if (t->left != NULL) q.push(t->left);
+                if (t->right != NULL) q.push(t->right);
+                temp.push_back(t->val);
+                q.pop();
+            }
+            if (flag == 1) {
+                res.push_back(temp);
+            }
+            else {
+                reverse(temp.begin(), temp.end());
+                res.push_back(temp);
+            }
+            flag *= -1;
+        }
+        return res;
+    }
+};
+```
