@@ -1,0 +1,36 @@
+给定一个大小为 n 的数组，找出其中所有出现超过 ⌊ n/3 ⌋ 次的元素。
+说明: 要求算法的时间复杂度为 O(n)，空间复杂度为 O(1)。
+
+解法：
+func majorityElement(nums []int) []int {
+	out := []int{}
+	a, b, c1, c2, l := 0, 0, 0, 0, len(nums)
+	for _, num := range nums {
+		if num == a {
+			c1++
+		} else if num == b {
+			c2++
+		} else if c1 == 0 {
+			a, c1 = num, 1
+		} else if c2 == 0 {
+			b, c2 = num, 1
+		} else {
+			c1, c2 = c1-1, c2-1
+		}
+	}
+	c1, c2 = 0, 0
+	for _, num := range nums {
+		if num == a {
+			c1++
+		} else if num == b {
+			c2++
+		}
+	}
+	if c1 > l/3 {
+		out = append(out, a)
+	}
+	if c2 > l/3 {
+		out = append(out, b)
+	}
+	return out
+}
