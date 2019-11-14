@@ -59,3 +59,47 @@ class Solution:
                 elif board[i][j] == 'A':
                     board[i][j] = 'O'
 ```
+
+c++ 版本：
+``` c++
+class Solution {
+public:
+    int mx[4] = {0, 0, 1, -1};
+    int my[4] = {1, -1, 0, 0};
+    void solve(vector<vector<char>>& board) {
+        if (board.size() == 0) return;
+        int n = board.size(), m = board[0].size();
+        
+        vector<vector<int>> visited(n, vector<int>(m, 0));
+        queue<pair<int, int>> q;
+        for (int i = 0; i < m; i++) {
+            if (board[0][i] == 'O') q.push({0, i});
+            if (board[n-1][i] == 'O') q.push({n-1, i});
+        }
+        for (int i = 1; i < n-1; i++){
+            if (board[i][0] == 'O') q.push({i, 0});
+            if (board[i][m-1] == 'O') q.push({i, m-1});
+        }
+        while (!q.empty()){
+            pair<int, int> temp = q.front();
+            q.pop();
+            int x = temp.first, y = temp.second;
+            visited[x][y] = 1;
+            for (int i = 0; i < 4; i++){
+                int tx = x + mx[i], ty = y + my[i];
+                if (tx >= 0 && tx < n && ty >= 0 && ty < m && !visited[tx][ty] && board[tx][ty] == 'O'){
+                    q.push({tx, ty});
+                }
+            }
+        }
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < m; j++){
+                if (board[i][j] == 'O' && visited[i][j]) 
+                    continue;
+                else board[i][j] = 'X';
+            }
+        }
+        
+    }
+};
+```
