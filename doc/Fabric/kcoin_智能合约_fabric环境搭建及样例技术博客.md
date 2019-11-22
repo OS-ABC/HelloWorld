@@ -36,7 +36,7 @@ apt install docker-compose
 
 ```
 1.将node移到 /usr/local/node，不建议使用link(原因不太清楚)
-# mv  node-v6.12.3-linux-x64 /usr/local/node
+# mv  node-v10.9.0-linux-x64 /usr/local/node
 2.配置环境变量
 # vi /etc/profile
   export PATH=$PATH:/usr/local/node/bin
