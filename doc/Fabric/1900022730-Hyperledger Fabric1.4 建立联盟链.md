@@ -1,4 +1,4 @@
-# Hyperledger Fabric 建立联盟链
+# Hyperledger Fabric 1.4.4建立联盟链
 
 ## 1.前提条件
 
@@ -8,7 +8,7 @@
 * Docker — 版本 17.06.2-ce 及以上
 * Docker Compose — 版本1.14.0及以上
 * Golang — 版本1.12.x
-* Nodejs — 8 : 版本8.9.4及以上 ; 10 : 版本10.15.3及以上
+* Nodejs — 8 : 版本8.9.4及以上 ; 10 : 版本10.15.3及以上(实测最新版本13.1.0-2也可以运行)
 * Python 2.7
 
 
@@ -223,7 +223,9 @@ chmod +x prereqs-ubuntu.sh
 
 安装成功后，显示安装的软件名及版本号如下：
 
-![1572936879829](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1572936879829.png)
+![1574133717289](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric1.4%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1574133717289.png)
+
+
 
 ## 2. 安装案例、二进制文件以及docker镜像
 
@@ -233,13 +235,16 @@ chmod +x prereqs-ubuntu.sh
 * Checkout the appropriate version tag
 * Install the Hyperledger Fabric platform-specific binaries and config files for the version specified into the /bin and /config directories of fabric-samples
 * Download the Hyperledger Fabric docker images for the version specified
+* 
 
 ```bash
+# 删除以前安装的fabric镜像
+docker images -a | grep "fabric" | awk '{print $3}' | xargs docker rmi -f
 # 将短网址(http://bit.ly/2ysbOFE)改成了完整网址
-curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh | bash -s 2.0.0-alpha 2.0.0-alpha 0.4.15
+curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh | bash -s -- 1.4.4 1.4.4 0.4.18
 ```
 
-![1573026378281](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1573026378281.png)
+![1574260585743](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric1.4%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1574260585743.png)
 
 将可执行的二进制文件加入到环境变量中（位于当前路径下fabric-samples/bin文件夹中）
 
@@ -265,8 +270,6 @@ source ~/.profile
 peer version
 ```
 
-![1573024841593](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1573024841593.png)
-
 ## 3. 搭建网络
 
 ```bash
@@ -278,59 +281,18 @@ cd fabric-samples/first-network
 ./byfn.sh generate
 ```
 
-显示如下错误：
-
-```
-2019-11-06 19:58:51.219 CST [common.tools.configtxgen.localconfig] completeInitialization -> PANI 006 etcdraft configuration missing
-2019-11-06 19:58:51.219 CST [common.tools.configtxgen] func1 -> PANI 007 etcdraft configuration missing
-panic: etcdraft configuration missing [recovered]
-	panic: etcdraft configuration missing
-```
-
-解决方法：编辑`fabric-samples/first-network/configtx.yaml`文件，把OrdererType注释掉（因为后面的profile部分有重复的内容）
-
-```bash
-nano /home/fabric/fabric-samples/first-network/configtx.yaml
-```
-
-![1573057907133](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1573057907133.png)
-
 ```bash
 # 启动前停止所有运行的镜像
 docker ps -qa | xargs docker stop
 docker ps -qa | xargs docker rm
 ```
 
-
-
 ```bash
 # 启动网络
-./byfn.sh up
+./byfn.sh -m up
 ```
 
-出现如以下形式的错误
-
-```
-Error: failed to create deliver client for orderer: orderer client failed to connect to orderer.example.com:7050: failed to create new connection: connection error: desc = "transport: error while dialing: dial tcp: lookup orderer.example.com on 127.0.0.11:53: no such host"
-```
-
-参考[stack-overflow](https://stackoverflow.com/questions/52548185/how-to-fix-failed-to-execute-end-2-end-scenario-in-hyperledger-fabric),
-
-
-
-
-
-
-
-修改fabric-samples/first-newtork/base/peer-base.yaml,增加`- GODEBUG=netdns=go`在environment区域即可https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh
-
-
-
-
-
-
-
-
+![1574260097579](https://github.com/univerone/image/raw/master/Hyperledger%20Fabric1.4%20%E5%BB%BA%E7%AB%8B%E8%81%94%E7%9B%9F%E9%93%BE.assets/1574260097579.png)
 
 ```bash
 # 关闭网络
